@@ -33,7 +33,9 @@ const MovieCard: React.FC<MovieCardProps> = ({ movieData }) => {
         <View className="flex-row items-center justify-start gap-x-1">
           {Array.from({ length: Math.round(movieData.vote_average / 2) }).map(
             (_, index) => {
-              return <Image source={icons.star} className="size-4" />;
+              return (
+                <Image source={icons.star} className="size-4" key={index} />
+              );
             }
           )}
         </View>
